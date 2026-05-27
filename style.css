@@ -359,3 +359,97 @@ footer{
     font-size:1.5rem;
   }
 }
+/* =========================================
+   CLICKABLE TEAM CARDS (UPDATED VERSION)
+========================================= */
+
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:25px;
+  margin-top:20px;
+}
+
+/* make full card clickable */
+.team-card{
+  display:block;
+  text-decoration:none;
+  background:#1b1b1b;
+  padding:20px;
+  border-radius:18px;
+  transition:0.3s ease;
+  border-top:4px solid #22c55e;
+  color:white;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+}
+
+/* traffic color rotation */
+.team-card:nth-child(2){
+  border-top-color:#facc15;
+}
+
+.team-card:nth-child(3){
+  border-top-color:#ef4444;
+}
+
+.team-card:nth-child(4){
+  border-top-color:#22c55e;
+}
+
+/* hover effect = clickable feel */
+.team-card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 0 25px rgba(34,197,94,0.25);
+}
+
+/* image styling */
+.team-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:12px;
+  border:2px solid #333;
+  transition:0.3s ease;
+}
+
+/* image glow on hover */
+.team-card:hover img{
+  border-color:#facc15;
+}
+
+/* name styling */
+.team-card h4{
+  font-size:1.3rem;
+  margin:10px 0 5px;
+  color:white;
+}
+
+/* description */
+.team-card p{
+  color:#cfcfcf;
+  font-size:0.95rem;
+}
+
+/* subtle shine animation */
+.team-card::after{
+  content:'';
+  position:absolute;
+  top:-50%;
+  left:-50%;
+  width:200%;
+  height:200%;
+  background:linear-gradient(
+    rgba(255,255,255,0.05),
+    transparent
+  );
+  transform:rotate(25deg);
+  opacity:0;
+  transition:0.4s;
+}
+
+.team-card:hover::after{
+  opacity:1;
+}
