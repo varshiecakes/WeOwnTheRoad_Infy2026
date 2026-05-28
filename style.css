@@ -625,3 +625,14 @@ video:hover{
   border-radius: 20px;
 }
 
+.title {
+  font-size: 26px;
+  color: #22c55e;
+}
+
+.caption {
+  color: #1a9145;
+  font-size: 13px;
+  margin-left: 15px;
+}
+
