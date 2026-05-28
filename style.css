@@ -606,8 +606,6 @@ footer{
   background-color: #1b1b1b; 
   padding: 30px;
   border-radius: 28px;       
-  box-shadow: 9px 9px 18px rgba(0,0,0,0.35), 
-             -9px -9px 18px #ffffff;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -624,5 +622,8 @@ footer{
   height: 360px;
   border: 0;
   border-radius: 20px;
+  background-color: #E6EEF8;
+  box-shadow: inset 5px 5px 10px #c4cbd3, 
+              inset -5px -5px 10px #ffffff;
 }
 
